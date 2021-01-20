@@ -375,7 +375,7 @@ function deserializeWord(t) {
         Object.assign(dom.style, style);
 
         if (Array.isArray(n.content)) {
-          dom.appendChild(deserialize(n.content));
+          dom.appendChild(deserializeWord(n.content));
         } else {
           let content = sanitize(n.content).replace(/\n/g, "<br />");
           dom.innerHTML = content;
